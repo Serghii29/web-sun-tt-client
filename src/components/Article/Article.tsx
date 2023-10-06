@@ -17,12 +17,11 @@ export const Article: React.FC = React.memo(() => (
       </p>
 
       <span className="article__text">
-        If you have tried everything, but still seem to suffer from
-        snoring, don’t give up. Before turning to surgery, consider
-        shopping for anti-snore devices. These products do not
-        typically require a prescription, are economically priced
-        and may just be the answer that you are looking for.
-        However, as is the case when shopping for anything,
+        If you have tried everything, but still seem to suffer from snoring,
+        don’t give up. Before turning to surgery, consider shopping for
+        anti-snore devices. These products do not typically require a
+        prescription, are economically priced and may just be the answer that
+        you are looking for. However, as is the case when shopping for anything,
         there are a lot of anti-snore devices out there and…
       </span>
 
@@ -32,11 +31,7 @@ export const Article: React.FC = React.memo(() => (
         <p className="article__author">Jim Sullivan</p>
 
         <div className="article__time-read">
-          <img
-            src="./icons/clock.svg"
-            alt="icon clock"
-            height="12px"
-          />
+          <img src="./icons/clock.svg" alt="icon clock" height="12px" />
           <p>6 min read</p>
         </div>
       </div>
