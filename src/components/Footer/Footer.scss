@@ -1,0 +1,26 @@
+@import "../../utilsScss/variables";
+
+.footer {
+  background-color: $bodyText;
+  display: flex;
+  justify-content: center;
+  color: $mainBgColor;
+
+  &__container {
+    max-width: $maxWidth;
+    width: 100%;
+    padding: 64px 0 44px;
+  }
+
+  &__info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__rights {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}
