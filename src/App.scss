@@ -1,0 +1,13 @@
+@import "./utilsScss/variables.scss";
+@import "./utilsScss/normalize.scss";
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $mainBgColor;
+  color: $dark;
+  font-style: normal;
+}
+
+.app {
+  min-height: 100vh;
+}
