@@ -29,9 +29,7 @@ export const Footer = () => (
         <SloganCompany />
       </div>
 
-      <p className="footer__rights">
-        ©2021 All Rights Reserved
-      </p>
+      <p className="footer__rights">©2021 All Rights Reserved</p>
     </div>
   </div>
 );

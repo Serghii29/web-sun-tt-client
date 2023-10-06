@@ -4,11 +4,7 @@ import './SloganCompany.scss';
 export const SloganCompany: React.FC = React.memo(() => (
   <div className="slogan">
     <a href="/">
-      <img
-        src="./images/logo.png"
-        alt="company logo"
-        className="slogan__img"
-      />
+      <img src="./images/logo.png" alt="company logo" className="slogan__img" />
     </a>
 
     <p className="slogan__text">
