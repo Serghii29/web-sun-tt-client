@@ -13,7 +13,9 @@ export const Header: React.FC = React.memo(() => (
 
         <div>
           <p className="header__help">Need Help?</p>
-          <a className="header__tel" href="tel:(514) 543-9936">(514) 543-9936</a>
+          <a className="header__tel" href="tel:(514) 543-9936">
+            (514) 543-9936
+          </a>
         </div>
       </div>
 

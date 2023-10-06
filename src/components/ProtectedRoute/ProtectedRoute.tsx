@@ -5,7 +5,5 @@ type Props = {
 };
 
 export const ProtectedRoute: React.FC<Props> = ({ children }) => (
-  <div>
-    { children }
-  </div>
+  <div>{children}</div>
 );
