@@ -1,10 +1,10 @@
-@import '../../utilsScss/variables';
+@import "../../utilsScss/variables";
 
 .news-item {
   padding: 16px;
   font-weight: 500;
   color: $mainBgColor;
-  background-image: url('./images/close-up-man-writing-code-laptop.jpg');
+  background-image: url("./images/close-up-man-writing-code-laptop.jpg");
 
   &__title {
     font-size: 18px;
