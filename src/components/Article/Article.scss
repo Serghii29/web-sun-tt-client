@@ -1,0 +1,54 @@
+@import '../../utilsScss/variables';
+
+.article {
+  display: flex;
+  font-size: 14px;
+
+  &__descriptoin {
+    padding: 32px 24px;
+  }
+
+  &__category {
+    color: $accent;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-weight: 400;
+    line-height: 28px;
+    color: $bodyText;
+    margin-bottom: 36px;
+  }
+
+  &__info-block {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $smallSecondaryText
+  }
+
+  &__data {
+    margin-right: 8px;
+  }
+
+  &__author {
+    color: $accent;
+    margin-right: 32px;
+  }
+
+  &__time-read {
+    display: flex;
+    align-items: center;
+  }
+}

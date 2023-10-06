@@ -1,0 +1,11 @@
+@import '../../utilsScss/variables';
+
+.blog {
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    max-width: $maxWidth;
+    width: 100%;
+  }
+}
