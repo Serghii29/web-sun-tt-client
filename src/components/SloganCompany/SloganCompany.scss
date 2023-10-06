@@ -1,0 +1,15 @@
+@import "../../utilsScss/variables";
+
+.slogan {
+  color: $mainBgColor;
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-style: normal;
+    line-height: 28px;
+  }
+}
