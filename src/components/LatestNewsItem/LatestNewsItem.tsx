@@ -14,11 +14,7 @@ export const LatestNewsItem: React.FC<Props> = ({ article }) => {
 
   return (
     <div className="news-item">
-      <img
-        src={img}
-        alt="news poster"
-        className="news-item__img"
-      />
+      <img src={img} alt="news poster" className="news-item__img" />
 
       <div className="news-item__info-block">
         <p className="news-item__title">{preparedTitle}</p>

@@ -58,7 +58,11 @@ export const Blog: React.FC = () => {
           ))}
         </div>
 
-        <Pagination count={count} color="primary" onChange={handlerPageChange} />
+        <Pagination
+          count={count}
+          color="primary"
+          onChange={handlerPageChange}
+        />
       </div>
     </div>
   );

@@ -27,31 +27,21 @@ export const Article: React.FC = React.memo(() => {
 
   return (
     <div className="article">
-      <img
-        src={article?.img}
-        alt="image"
-        className="article__image"
-      />
+      <img src={article?.img} alt="image" className="article__image" />
 
       <div className="article__descriptoin">
         <p className="article__category">{article?.category}</p>
 
-        <p className="article__title">
-          {preparedTitle}
-        </p>
+        <p className="article__title">{preparedTitle}</p>
 
-        <p className="article__text">
-          {preparedText}
-        </p>
+        <p className="article__text">{preparedText}</p>
 
         <div className="article__info-block">
           <p className="article__data">
             {format(new Date(article?.createdAt || 0), 'dd MMM yyyy')}
           </p>
 
-          <p className="article__author">
-            {article?.author}
-          </p>
+          <p className="article__author">{article?.author}</p>
 
           <div className="article__time-read">
             <img src="./icons/clock.svg" alt="icon clock" height="12px" />
