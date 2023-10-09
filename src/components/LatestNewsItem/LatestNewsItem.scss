@@ -1,10 +1,28 @@
 @import "../../utilsScss/variables";
 
 .news-item {
-  padding: 16px;
   font-weight: 500;
   color: $mainBgColor;
-  background-image: url("./images/close-up-man-writing-code-laptop.jpg");
+  width: 425px;
+
+  position: relative;
+
+  &__img {
+    width: 100%;
+    height: 114px;
+    display: block;
+  }
+
+  &__info-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 21px 32px;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
   &__title {
     font-size: 18px;

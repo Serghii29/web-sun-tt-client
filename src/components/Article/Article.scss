@@ -2,10 +2,21 @@
 
 .article {
   display: flex;
+  gap: 23px;
   font-size: 14px;
+  max-width: 100%;
+  max-height: 432px;
+  background-color: $cardsBgColor;
+  margin-bottom: 72px;
+
+  &__image {
+    flex: 1;
+    max-width: 50%;
+    display: block;
+  }
 
   &__descriptoin {
-    padding: 32px 24px;
+    padding: 32px 24px 0;
   }
 
   &__category {

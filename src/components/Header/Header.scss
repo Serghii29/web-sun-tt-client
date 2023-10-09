@@ -32,3 +32,27 @@
     line-height: 24px;
   }
 }
+
+@media (max-width: 850px) {
+  .header {
+    padding: 20px 20px;
+
+    &__info_block {
+      gap: 20px;
+    }
+
+    &__tel {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .header {
+    padding: 20px 10px;
+
+    &__info_block {
+      gap: 10px;
+    }
+  }
+}
