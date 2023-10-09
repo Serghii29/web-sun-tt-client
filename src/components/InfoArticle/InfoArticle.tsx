@@ -10,25 +10,16 @@ type Props = {
 
 export const InfoArticle: React.FC<Props> = ({ article }) => {
   const {
-    category,
-    title,
-    createdAt,
-    author,
-    time,
-    img,
+    category, title, createdAt, author, time, img,
   } = article;
 
   return (
     <div className="info-article">
       <img src={img} alt="article photo" className="info-article__img" />
 
-      <p className="info-article__category">
-        {category}
-      </p>
+      <p className="info-article__category">{category}</p>
 
-      <p className="info-article__title">
-        {title}
-      </p>
+      <p className="info-article__title">{title}</p>
 
       <div className="info-article__information-block">
         <span className="info-article__data">

@@ -1,40 +1,58 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { format } from 'date-fns';
+import { Service } from '../../api/service';
+import { ArticleType } from '../../types';
 import './Article.scss';
 
-export const Article: React.FC = React.memo(() => (
-  <div className="article">
-    {/* <img
-      src="./images/beautiful-girl-is-engaged-yoga-studio.jpg"
-      alt="image"
-    /> */}
+export const Article: React.FC = React.memo(() => {
+  const [article, setArticle] = useState<ArticleType | null>(null);
 
-    <div className="article__descriptoin">
-      <p className="article__category">Pharmaceuticals</p>
+  const preparedText = article?.text.slice(0, 350);
+  const preparedTitle = article?.title.slice(0, 40);
 
-      <p className="article__title">
-        A Sure Way To Get Rid Of Your Back Ache Problem
-      </p>
+  const fetchRandom = async () => {
+    try {
+      const data = await Service.getRandomArticle();
 
-      <span className="article__text">
-        If you have tried everything, but still seem to suffer from snoring,
-        don’t give up. Before turning to surgery, consider shopping for
-        anti-snore devices. These products do not typically require a
-        prescription, are economically priced and may just be the answer that
-        you are looking for. However, as is the case when shopping for anything,
-        there are a lot of anti-snore devices out there and…
-      </span>
+      setArticle(data);
+    } catch (error) {
+      throw new Error('Downloading error');
+    }
+  };
 
-      <div className="article__info-block">
-        <p className="article__data">28 Feb 2021</p>
+  useEffect(() => {
+    fetchRandom();
+  }, []);
 
-        <p className="article__author">Jim Sullivan</p>
+  return (
+    <div className="article">
+      <img src={article?.img} alt="image" className="article__image" />
 
-        <div className="article__time-read">
-          <img src="./icons/clock.svg" alt="icon clock" height="12px" />
-          <p>6 min read</p>
+      <div className="article__descriptoin">
+        <p className="article__category">{article?.category}</p>
+
+        <p className="article__title">{preparedTitle}</p>
+
+        <p className="article__text">{preparedText}</p>
+
+        <div className="article__info-block">
+          <p className="article__data">
+            {format(new Date(article?.createdAt || 0), 'dd MMM yyyy')}
+          </p>
+
+          <p className="article__author">{article?.author}</p>
+
+          <div className="article__time-read">
+            <img src="./icons/clock.svg" alt="icon clock" height="12px" />
+            <p>
+              {article?.time}
+              {' '}
+              min read
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-));
+  );
+});
